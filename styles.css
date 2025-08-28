@@ -1,0 +1,934 @@
+/* 全局樣式 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8f9fa;
+}
+
+a {
+    text-decoration: none;
+    color: #0066cc;
+}
+
+ul {
+    list-style: none;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.section-header h2 {
+    font-size: 2.2rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.section-header p {
+    font-size: 1.1rem;
+    color: #666;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #0066cc;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 4px;
+    font-weight: bold;
+    transition: all 0.3s;
+}
+
+.btn:hover {
+    background-color: #0055aa;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.btn-outline {
+    background-color: transparent;
+    border: 2px solid white;
+}
+
+.btn-outline:hover {
+    background-color: white;
+    color: #0066cc;
+}
+
+.btn-small {
+    display: inline-block;
+    background-color: #0066cc;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-size: 0.9em;
+    transition: all 0.3s;
+}
+
+.btn-small:hover {
+    background-color: #0055aa;
+    transform: translateY(-2px);
+}
+
+/* 頁頭樣式 */
+header {
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    transition: all 0.3s;
+}
+
+header.scrolled {
+    padding: 0.5rem 2rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo h1 {
+    color: #0066cc;
+    font-size: 1.8rem;
+    margin-bottom: 0.2rem;
+}
+
+.logo p {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+nav ul {
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 1.5rem;
+}
+
+nav ul li a {
+    color: #333;
+    font-weight: 500;
+    padding: 0.5rem 0;
+    position: relative;
+}
+
+nav ul li a:after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #0066cc;
+    transition: width 0.3s;
+}
+
+nav ul li a:hover:after,
+nav ul li a.active:after {
+    width: 100%;
+}
+
+.mobile-menu-toggle {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #0066cc;
+}
+
+/* 英雄區塊樣式 */
+.hero {
+    height: 80vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://source.unsplash.com/random/1600x900/?freediving');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero-content {
+    max-width: 800px;
+    padding: 2rem;
+}
+
+.hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+/* 關於我們區塊 */
+.about {
+    padding: 5rem 0;
+    background-color: white;
+}
+
+.about-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 2rem;
+}
+
+.about-text {
+    flex: 1;
+    min-width: 300px;
+}
+
+.about-text p {
+    margin-bottom: 1rem;
+    line-height: 1.8;
+    color: #555;
+}
+
+.about-image {
+    flex: 1;
+    min-width: 300px;
+}
+
+.about-image img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* 課程區塊樣式 */
+.courses {
+    padding: 5rem 0;
+    background-color: #f8f9fa;
+}
+
+.course-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.course-card {
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.course-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.course-card-image {
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+}
+
+.course-card-content {
+    padding: 1.5rem;
+}
+
+.course-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.course-card p {
+    color: #666;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+/* 特色區塊樣式 */
+.features {
+    padding: 4rem 0;
+    background-color: white;
+}
+
+.features .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.feature {
+    flex: 1;
+    min-width: 220px;
+    padding: 2rem;
+    text-align: center;
+    margin: 1rem;
+    transition: transform 0.3s;
+}
+
+.feature:hover {
+    transform: translateY(-10px);
+}
+
+.feature-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 1.5rem;
+    background-color: #f0f7ff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.feature-icon i {
+    font-size: 2.5rem;
+    color: #0066cc;
+}
+
+.feature h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0.8rem;
+    color: #333;
+}
+
+.feature p {
+    color: #666;
+    font-size: 0.95rem;
+}
+
+/* 影片區塊樣式 */
+.video-section {
+    padding: 5rem 0;
+    background-color: #f8f9fa;
+}
+
+.video-container {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.video-placeholder {
+    width: 100%;
+    display: block;
+}
+
+.play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80px;
+    height: 80px;
+    background-color: rgba(0, 102, 204, 0.8);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.play-button i {
+    color: white;
+    font-size: 2rem;
+}
+
+.play-button:hover {
+    background-color: #0066cc;
+    transform: translate(-50%, -50%) scale(1.1);
+}
+
+/* 見證區塊樣式 */
+.testimonials {
+    background-color: #f0f7ff;
+    padding: 5rem 0;
+}
+
+.testimonial-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.testimonial {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+}
+
+.testimonial-image {
+    flex-shrink: 0;
+}
+
+.testimonial-image img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #0066cc;
+}
+
+.testimonial-content {
+    flex-grow: 1;
+}
+
+.testimonial-content p {
+    font-style: italic;
+    margin-bottom: 1rem;
+    color: #555;
+    line-height: 1.7;
+}
+
+.testimonial-author {
+    font-weight: bold;
+    color: #0066cc;
+}
+
+/* 即將開課區塊 */
+.upcoming-courses {
+    padding: 5rem 0;
+    background-color: white;
+}
+
+.upcoming-courses-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.upcoming-course {
+    background-color: #f8f9fa;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.upcoming-course:hover {
+    transform: translateY(-5px);
+}
+
+.course-date {
+    font-weight: bold;
+    color: #0066cc;
+    margin-bottom: 0.8rem;
+}
+
+.course-name {
+    font-size: 1.2rem;
+    margin-bottom: 0.8rem;
+}
+
+.course-status {
+    color: #666;
+    margin-bottom: 1.5rem;
+}
+
+/* FAQ預覽區塊 */
+.faq-preview {
+    padding: 5rem 0;
+    background-color: #f8f9fa;
+}
+
+.faq-preview-list {
+    margin-bottom: 3rem;
+}
+
+.faq-preview-item {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1.5rem;
+}
+
+.faq-preview-item h3 {
+    font-size: 1.3rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.faq-preview-item p {
+    color: #666;
+    line-height: 1.7;
+}
+
+.faq-more {
+    text-align: center;
+}
+
+/* 行動呼籲區塊樣式 */
+.cta {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://source.unsplash.com/random/1600x900/?ocean');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 4rem 2rem;
+}
+
+.cta h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.cta p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* 頁尾樣式 */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 3rem 2rem 1rem;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 250px;
+    margin-bottom: 2rem;
+    padding-right: 2rem;
+}
+
+.footer-section h3 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: #0066cc;
+}
+
+.footer-section p {
+    margin-bottom: 0.8rem;
+    color: #ccc;
+}
+
+.social-icons {
+    margin-top: 1rem;
+}
+
+.social-icons a {
+    color: white;
+    font-size: 1.5rem;
+    margin-right: 1rem;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: #0066cc;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 1rem;
+    border-top: 1px solid #555;
+    color: #999;
+}
+
+/* 響應式設計 */
+@media (max-width: 992px) {
+    .about-content, .testimonial {
+        flex-direction: column;
+    }
+    
+    .testimonial-image {
+        margin-bottom: 1rem;
+    }
+    
+    .course-cards, .upcoming-courses-container {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        padding: 1rem;
+    }
+    
+    nav {
+        display: none;
+    }
+    
+    nav.mobile-active {
+        display: block;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: white;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        padding: 1rem;
+    }
+    
+    nav.mobile-active ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    nav.mobile-active ul li {
+        margin: 0.8rem 0;
+    }
+    
+    .mobile-menu-toggle {
+        display: block;
+    }
+    
+    .hero {
+        height: 60vh;
+    }
+    
+    .hero h2 {
+        font-size: 2rem;
+    }
+    
+    .hero-buttons {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .feature {
+        min-width: 100%;
+        margin: 1rem 0;
+    }
+    
+    .testimonial {
+        min-width: 100%;
+    }
+    
+    .course-cards, .upcoming-courses-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .section-header h2 {
+        font-size: 1.8rem;
+    }
+    
+    .hero h2 {
+        font-size: 1.6rem;
+    }
+    
+    .hero p {
+        font-size: 1rem;
+    }
+    
+    .about-text p, .feature p, .course-card p, .faq-preview-item p {
+        font-size: 0.95rem;
+    }
+}
+
+/* 課程頁面樣式 */
+.course-header {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://source.unsplash.com/random/1600x900/?diving');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 6rem 2rem;
+}
+
+.course-header h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.course-header p {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto 2rem;
+}
+
+.course-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+}
+
+.course-section {
+    margin-bottom: 4rem;
+}
+
+.course-section h3 {
+    font-size: 1.8rem;
+    color: #0066cc;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #0066cc;
+}
+
+.course-section p {
+    margin-bottom: 1rem;
+    line-height: 1.8;
+}
+
+.course-section ul {
+    margin-bottom: 1rem;
+    padding-left: 1.5rem;
+}
+
+.course-section ul li {
+    margin-bottom: 0.5rem;
+    list-style-type: disc;
+}
+
+.course-benefits {
+    background-color: #f0f7ff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-top: 2rem;
+}
+
+.course-benefits h4 {
+    color: #0066cc;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.course-benefits ul {
+    padding-left: 1rem;
+}
+
+.course-benefits ul li {
+    margin-bottom: 0.8rem;
+    color: #333;
+    list-style-type: none;
+}
+
+/* 標籤式顯示樣式 */
+.course-tabs {
+    margin-bottom: 3rem;
+}
+
+.tab-nav {
+    display: flex;
+    border-bottom: 2px solid #ddd;
+    margin-bottom: 2rem;
+}
+
+.tab-button {
+    padding: 1rem 2rem;
+    background: none;
+    border: none;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #666;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.3s;
+}
+
+.tab-button:hover {
+    color: #0066cc;
+}
+
+.tab-button.active {
+    color: #0066cc;
+}
+
+.tab-button.active::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #0066cc;
+}
+
+.tab-content {
+    position: relative;
+}
+
+.tab-pane {
+    display: none;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.tab-pane.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.course-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.course-card {
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.course-card:hover {
+    transform: translateY(-10px);
+}
+
+.course-card-image {
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+}
+
+.course-card-content {
+    padding: 1.5rem;
+}
+
+.course-card h4 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.course-card p {
+    color: #666;
+    margin-bottom: 1.5rem;
+}
+
+.course-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.course-price {
+    font-weight: bold;
+    color: #0066cc;
+    font-size: 1.2rem;
+}
+
+/* FAQ頁面樣式 */
+.faq-header {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://source.unsplash.com/random/1600x900/?question');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 6rem 2rem;
+}
+
+.faq-header h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.faq-header p {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faq-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+}
+
+.faq-section {
+    margin-bottom: 3rem;
+}
+
+.faq-section h3 {
+    font-size: 1.8rem;
+    color: #0066cc;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #0066cc;
+}
+
+.faq-item {
+    margin-bottom: 1.5rem;
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.faq-question {
+    padding: 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f8f9fa;
+}
+
+.faq-question:after {
+    content: '+';
+    font-size: 1.5rem;
+    color: #0066cc;
+}
+
+.faq-question.active:after {
+    content: '-';
+}
+
+.faq-answer {
+    padding: 0 1.5rem;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+}
+
+.faq-answer.show {
+    padding: 1.5rem;
+    max-height: 500px;
+}
+
+.faq-answer p {
+    line-height: 1.8;
+    color: #666;
+}

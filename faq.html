@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>常見問題QA - DreamLinStudio OneBreathe</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>DreamLinStudio OneBreathe</h1>
+            <p>台北、台中、小琉球自由潛水課程</p>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">首頁</a></li>
+                <li><a href="aida.html">AIDA自潛</a></li>
+                <li><a href="water-dance.html">水舞課程</a></li>
+                <li><a href="mermaid.html">人魚課程</a></li>
+                <li><a href="other-courses.html">其他課程</a></li>
+                <li><a href="faq.html" class="active">常見問題QA</a></li>
+            </ul>
+        </nav>
+
+        <style>
+        /* FAQ 頁面專屬樣式 */
+        .faq-page-container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+
+        .page-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .page-header h1 {
+            font-size: 2.8rem;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .page-header p {
+            font-size: 1.2rem;
+            color: #666;
+        }
+
+        .faq-accordion {
+            border-top: 1px solid #e0e0e0;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .faq-question {
+            width: 100%;
+            background: none;
+            border: none;
+            text-align: left;
+            padding: 20px;
+            font-size: 1.3rem;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: #0056b3;
+            transition: background-color 0.2s;
+        }
+        
+        .faq-question:hover {
+            background-color: #f9f9f9;
+        }
+
+        .faq-question .icon {
+            font-size: 1rem;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .faq-answer {
+            padding: 0 20px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-in-out, padding 0.3s ease-in-out;
+        }
+
+        .faq-answer p {
+            padding-bottom: 20px;
+            line-height: 1.7;
+            font-size: 1rem;
+            color: #555;
+        }
+
+        /* 當項目展開時的樣式 (透過 JavaScript 控制 .active class) */
+        .faq-item.active .faq-question .icon {
+            transform: rotate(45deg);
+        }
+    </style>
+    </header>
+
+    <main class="faq-page-container">
+        <div class="page-header">
+            <h1>常見問題</h1>
+            <p>為您解答關於自由潛水的種種疑惑</p>
+        </div>
+
+        <div class="faq-accordion">
+            <div class="faq-item">
+                <button class="faq-question">
+                    不會游泳可以學習自由潛水嗎？
+                </button>
+                <div class="faq-answer">
+                    <p>可以的。許多自由潛水課程對游泳能力沒有硬性要求，因為自由潛水使用的蛙鞋踢動方式與游泳不同。但具備基本的水性（不怕水、能在水中漂浮）會讓學習過程更順利。我們的教練會非常有耐心地引導您建立在水中的信心與安全感。</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    我應該先上 AIDA 1 還是可以直接上 AIDA 2？
+                  
+                </button>
+                <div class="faq-answer">
+                    <p>AIDA 1 是一天的課程，主要在平靜水域（泳池）進行，專注於理論基礎和安全觀念，沒有深度要求。AIDA 2 是更完整的入門課程，通常為三天，包含開放水域（海洋）的訓練，目標深度為 12-20 米。如果您對海洋有不確定感或時間有限，可以從 AIDA 1 開始。如果您渴望直接體驗海洋，且符合 AIDA 2 的前提條件（能游泳200米），可以直接報名 AIDA 2。</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    上課需要自己準備裝備嗎？
+                  
+                </button>
+                <div class="faq-answer">
+                    <p>不需要！我們的課程費用已包含所有上課期間所需的個人裝備，包括低容積面鏡、呼吸管、防寒衣、長蛙鞋及配重帶。您只需要帶著您的泳衣和一顆愉快的心前來即可。當然，如果您有自己的習慣裝備，也歡迎帶來使用。</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <button class="faq-question">
+                    自由潛水安全嗎？我對閉氣感到恐懼。
+                  
+                </button>
+                <div class="faq-answer">
+                    <p>在遵守安全守則和專業教練的指導下，自由潛水是一項非常安全的極限運動。我們的課程將「安全」放在第一位，您會學習到最重要的潛伴制度、水面救援技巧以及如何辨識和避免風險。對於閉氣的恐懼是很正常的，課程會從呼吸和放鬆技巧開始，循序漸進地讓您發現身體的潛能遠超想像。</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    課程沒考過怎麼辦？
+                  
+                </button>
+                <div class="faq-answer">
+                    <p>自由潛水學習的進度因人而異，尤其耳壓平衡是許多人需要時間適應的關卡。如果課程結束時未能完成所有考核標準，您會拿到「結業」證明。在證照有效期限內（通常為一年），您可以預約補課或參加我們的團練，直到通過所有項目並取得正式證照，我們會酌收相應的場地費或教練費。</p>
+                </div>
+            </div>
+             <div class="faq-item">
+                <button class="faq-question">
+                    課程地點在哪裡？台北、台中、小琉球有什麼不同？
+                  
+                </button>
+                <div class="faq-answer">
+                    <p>我們的平靜水域（泳池）課程在台北和台中的合作泳池或潛立方進行。開放水域（海洋）課程主要在東北角（夏季）和小琉球（冬季）舉行。台北班適合北部學員，方便在市區完成泳池訓練；台中班則常利用潛立方的深水泳池模擬海洋環境；小琉球擁有溫暖清澈的海水，是絕佳的海洋實習地點。</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>關於DreamLinStudio</h3>
+                <p>由專業自由潛水教練組成的DreamLinStudio，在台北、台中、小琉球均有自由潛水課程，並提供多種自由潛水系統選擇，讓學生在專業多元的環境下，擁抱海底下的美麗。</p>
+            </div>
+            <div class="footer-section">
+                <h3>聯絡我們</h3>
+                <p><i class="fas fa-envelope"></i> info@onebreathfreediving.org</p>
+                <p><i class="fas fa-phone"></i> +886 123 456 789</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>課程地點</h3>
+                <p><i class="fas fa-map-marker-alt"></i> 台北市</p>
+                <p><i class="fas fa-map-marker-alt"></i> 台中市</p>
+                <p><i class="fas fa-map-marker-alt"></i> 小琉球</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 DreamLinStudio OneBreathe. 版權所有。</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const faqItems = document.querySelectorAll('.faq-item');
+
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                const answer = item.querySelector('.faq-answer');
+
+                question.addEventListener('click', () => {
+                    const isActive = item.classList.contains('active');
+
+                    // 關閉所有已展開的項目
+                    faqItems.forEach(i => {
+                        i.classList.remove('active');
+                        i.querySelector('.faq-answer').style.maxHeight = null;
+                        i.querySelector('.faq-answer').style.padding = '0 20px';
+                    });
+                    
+                    // 如果當前項目不是已展開的，則展開它
+                    if (!isActive) {
+                        item.classList.add('active');
+                        answer.style.maxHeight = answer.scrollHeight + 'px';
+                        answer.style.padding = '0 20px 20px';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
